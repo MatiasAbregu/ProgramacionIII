@@ -1,0 +1,17 @@
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/bin/Debug/net10.0/ProgramacionIII.BD.deps.json
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/bin/Debug/net10.0/ProgramacionIII.BD.runtimeconfig.json
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/bin/Debug/net10.0/ProgramacionIII.BD.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/bin/Debug/net10.0/ProgramacionIII.BD.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/bin/Debug/net10.0/ProgramacionIII.Shared.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/bin/Debug/net10.0/ProgramacionIII.Shared.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.csproj.AssemblyReference.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.GeneratedMSBuildEditorConfig.editorconfig
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.AssemblyInfoInputs.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.AssemblyInfo.cs
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.csproj.CoreCompileInputs.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/Programa.08636A70.Up2Date
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/refint/ProgramacionIII.BD.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ProgramacionIII.BD.genruntimeconfig.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/Debug/net10.0/ref/ProgramacionIII.BD.dll

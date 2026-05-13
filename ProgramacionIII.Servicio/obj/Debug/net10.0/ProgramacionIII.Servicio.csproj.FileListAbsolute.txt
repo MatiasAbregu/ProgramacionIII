@@ -1,0 +1,15 @@
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/bin/Debug/net10.0/ProgramacionIII.Servicio.deps.json
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/bin/Debug/net10.0/ProgramacionIII.Servicio.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/bin/Debug/net10.0/ProgramacionIII.Servicio.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/bin/Debug/net10.0/ProgramacionIII.Shared.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/bin/Debug/net10.0/ProgramacionIII.Shared.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.csproj.AssemblyReference.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.GeneratedMSBuildEditorConfig.editorconfig
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.AssemblyInfoInputs.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.AssemblyInfo.cs
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.csproj.CoreCompileInputs.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/Programa.80C4E385.Up2Date
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/refint/ProgramacionIII.Servicio.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ProgramacionIII.Servicio.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/Debug/net10.0/ref/ProgramacionIII.Servicio.dll

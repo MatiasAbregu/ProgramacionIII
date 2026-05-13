@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ProgramacionIII.Servicio/1.0.0": {
+        "dependencies": {
+          "ProgramacionIII.Shared": "1.0.0"
+        },
+        "runtime": {
+          "ProgramacionIII.Servicio.dll": {}
+        }
+      },
+      "ProgramacionIII.Shared/1.0.0": {
+        "runtime": {
+          "ProgramacionIII.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProgramacionIII.Servicio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProgramacionIII.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

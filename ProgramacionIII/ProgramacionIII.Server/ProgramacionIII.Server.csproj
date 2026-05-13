@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-ProgramacionIII-ad99572a-8958-4928-8b40-155383f65ccd</UserSecretsId>
+        <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+        <RootNamespace>ProgramacionIII</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+        <ProjectReference Include="..\..\ProgramacionIII.Repositorios\ProgramacionIII.Repositorios.csproj" />
+        <ProjectReference Include="..\ProgramacionIII.Client\ProgramacionIII.Client.csproj"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.5"/>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.5"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5"/>
+    </ItemGroup>
+
+</Project>

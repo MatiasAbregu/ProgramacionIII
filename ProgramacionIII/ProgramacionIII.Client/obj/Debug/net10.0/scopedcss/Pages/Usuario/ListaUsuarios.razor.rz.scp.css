@@ -1,0 +1,26 @@
+.containerButtons[b-jnrckkb9it] {
+    align-self: flex-end;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.btnSearch[b-jnrckkb9it] {
+    margin-right: 1%;
+}
+
+.col-editar a[b-jnrckkb9it] {
+    margin-right: 5px;
+}
+
+.msg-estado[b-jnrckkb9it] {
+    background-color: #149700;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 1vw 5vw;
+    border-radius: 10px;
+}

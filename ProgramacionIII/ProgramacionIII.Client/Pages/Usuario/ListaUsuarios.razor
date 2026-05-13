@@ -1,0 +1,154 @@
+﻿@page "/usuarios"
+@rendermode InteractiveServer
+
+@using ProgramacionIII.Servicio.ServiciosHttp
+@using ProgramacionIII.Shared.DTO_Response
+@using ProgramacionIII.Shared.DTO_Usuarios
+@inject IHttpServicio http;
+
+<AuthorizeView Roles="Administrador">
+    <Authorized>
+        <h3>Usuarios</h3>
+        <br />
+        <div class="containerButtons">
+            <button class="btn btn-warning btnSearch" type="button" @onclick="() => LeerUsuarios()"><i class="bi bi-arrow-repeat"></i></button>
+            <button class="btn btn-primary btnSearch" type="button" @onclick="() => modal = true"><i class="bi bi-search"></i></button>
+            <a class="btn btn-success" href="/usuarios/crear">Crear usuario <i class="bi bi-person-fill-add"></i></a>
+        </div>
+        @if (modal)
+        {
+            <div class="modal-backdrop fade show"></div>
+            <div class="modal fade show" id="exampleModal" tabindex="-1" style="display: block">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Buscar usuario</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" @onclick="() => modal = false"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nombre de usuario:</label>
+                                    <input @bind="NombreUsuario" type="text" class="form-control" id="recipient-name" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" @onclick="() => BuscarUsuarioPorNombre()" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="table-dark">
+                <tr>
+                    <th>Nombre de usuario</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @if (!String.IsNullOrEmpty(mensaje))
+                {
+                    <tr>
+                        <td colspan="3">@mensaje</td>
+                    </tr>
+                }
+                else if(usuarios == null)
+                {
+                    <tr>
+                        <td colspan="3">@mensaje</td>
+                    </tr>
+                }
+                else if (usuarios != null && usuarios.Count > 0)
+                {
+                    @foreach (var usuario in usuarios)
+                    {
+                        <tr>
+                            <td>@usuario.NombreUsuario</td>
+                            <td>
+                                <span class="badge text-bg-primary fs-6">@usuario.roles[0]</span>
+                            </td>
+                            <td>@usuario.Estado</td>
+                            <td class="col-editar">
+                                <a class="btn btn-primary" href="/usuarios/editar/@usuario.Id">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <button class="btn @(usuario.Estado == "Activo" ? "btn-danger" : "btn-success")" @onclick="() => CambiarEstado(usuario.Id)">
+                                    @if (usuario.Estado == "Activo")
+                                    {
+                                        <i class="bi bi-dash-circle"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="bi bi-plus-circle"></i>
+                                    }
+                                </button>
+                            </td>
+                        </tr>
+                    }
+            
+                }
+                </tbody>
+            </table>
+            @if (!string.IsNullOrEmpty(mensajeEstado))
+            {
+                <p class="msg-estado">@mensajeEstado</p>
+            }
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Usted no está autorizado a acceder a esta opción.</h3>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private List<UsuarioVerDTO>? usuarios;
+    private string mensaje = "";
+    private string mensajeEstado = "";
+    private bool modal = false;
+    private string NombreUsuario = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await LeerUsuarios();
+    }
+
+    private async Task LeerUsuarios()
+    {
+        var res = await http.Get<Response<List<UsuarioVerDTO>>>("api/usuarios");
+        if (res.Respuesta != null)
+        {
+            usuarios = res.Respuesta.Objeto;
+            mensaje = res.Respuesta.Mensaje;
+        }
+    }
+
+    private async Task CambiarEstado(string id)
+    {
+        var res = await http.Delete<Response<UsuarioVerDTO>>($"api/usuarios/{id}");
+        if (res.Respuesta != null)
+        {
+            await LeerUsuarios();
+            mensajeEstado = res.Respuesta.Mensaje;
+            StateHasChanged();
+            await Task.Delay(2500);
+            mensajeEstado = "";
+        }
+    }
+
+    private async Task BuscarUsuarioPorNombre()
+    {
+        modal = false;
+        var res = await http.Get<Response<List<UsuarioVerDTO>>>($"api/usuarios/nombre/{NombreUsuario}");
+        if (res.Respuesta != null)
+        {
+            usuarios = res.Respuesta.Objeto;
+            mensaje = res.Respuesta.Mensaje;
+        }
+    }
+}

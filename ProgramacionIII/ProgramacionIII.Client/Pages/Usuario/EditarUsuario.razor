@@ -1,0 +1,127 @@
+﻿@page "/usuarios/editar/{id}"
+@rendermode InteractiveServer
+
+@using ProgramacionIII.Servicio.ServiciosHttp
+@using ProgramacionIII.Shared.DTO_Response
+@using ProgramacionIII.Shared.DTO_Roles
+@using ProgramacionIII.Shared.DTO_Usuarios
+@inject IHttpServicio http
+@inject NavigationManager httpNav
+
+<h3>Editar usuario</h3>
+<EditForm Model="usuario" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+    @if (!string.IsNullOrEmpty(MensajeError))
+    {
+        <p class="alert alert-danger">@MensajeError</p>
+    }
+    <div class="form-group container-fluid">
+        <div class="my-3">
+            <label>Escriba el nombre de usuario:</label>
+            <div>
+                <InputText class="form-control" @bind-Value="usuario.NombreUsuario" />
+                <ValidationMessage For="@(() => usuario.NombreUsuario)" />
+            </div>
+        </div>
+        <div class="my-3">
+            <label>Escriba la contraseña del usuario:</label>
+            <div>
+                <InputText class="form-control" @bind-Value="usuario.Contrasena" />
+                <p class="legend">(Si se deja vacio el campo, la contraseña no se cambiará)</p>
+            </div>
+        </div>
+        <div class="my-3">
+            <label>Escoja el rol del usuario:</label>
+            <div>
+                @if (roles != null)
+                {
+                    <InputSelect class="form-select" @bind-Value="RolSeleccionado">
+                        @foreach (var rol in roles)
+                        {
+                            <option value="@rol.NombreRol">@FormatearTexto(rol.NombreRol)</option>
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => usuario.Roles)" />
+                }
+                else
+                {
+                    <p>Hubo un error al cargar los roles desde el servidor. Reintente más tarde o contacte con un administrador.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success" type="submit">Guardar</button>
+    <a class="btn btn-danger" href="/usuarios">Cancelar</a>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string id { get; set; }
+
+    private ActualizarUsuarioDTO usuario = new ActualizarUsuarioDTO();
+    private List<VerRolDTO> roles;
+    private string RolSeleccionado
+    {
+        get => usuario.Roles?.FirstOrDefault() ?? "";
+        set => usuario.Roles = new List<string> { value };
+    }
+    private string MensajeError;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await CargarRoles();
+        await CargarDatosUsuario();
+    }
+
+    private async Task CargarRoles()
+    {
+        var res = await http.Get<Response<List<VerRolDTO>>>("api/roles");
+        if (res.Respuesta != null)
+        {
+            roles = res.Respuesta.Objeto;
+            RolSeleccionado = roles[0].NombreRol;
+        }
+    }
+
+    private async Task CargarDatosUsuario()
+    {
+        var res = await http.Get<Response<UsuarioVerDTO>>($"api/usuarios/{id}");
+        if (res.Respuesta != null)
+        {
+            usuario = new ActualizarUsuarioDTO()
+            {
+                Id = id,
+                NombreUsuario = res.Respuesta.Objeto.NombreUsuario,
+                Roles = res.Respuesta.Objeto.roles
+            };
+            RolSeleccionado = usuario.Roles[0];
+        }
+    }
+
+    private string FormatearTexto(string texto)
+    {
+        if (string.IsNullOrWhiteSpace(texto))
+            return texto;
+
+        return char.ToUpper(texto[0]) + texto.Substring(1).ToLower();
+    }
+
+    private async Task Guardar()
+    {
+        if (string.IsNullOrEmpty(usuario.Contrasena)) usuario.Contrasena = null;
+
+        var res = await http.Put<ActualizarUsuarioDTO, Response<UsuarioVerDTO>>($"api/usuarios/{id}", usuario);
+        if (res.Respuesta != null)
+        {
+            if (res.Respuesta.Estado)
+            {
+                httpNav.NavigateTo("/usuarios");
+            }
+            else
+            {
+                MensajeError = res.Respuesta.Mensaje;
+            }
+        }
+    }
+}

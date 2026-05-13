@@ -1,0 +1,11 @@
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/bin/Debug/net10.0/ProgramacionIII.Shared.deps.json
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/bin/Debug/net10.0/ProgramacionIII.Shared.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/bin/Debug/net10.0/ProgramacionIII.Shared.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ProgramacionIII.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ProgramacionIII.Shared.AssemblyInfoInputs.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ProgramacionIII.Shared.AssemblyInfo.cs
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ProgramacionIII.Shared.csproj.CoreCompileInputs.cache
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ProgramacionIII.Shared.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/refint/ProgramacionIII.Shared.dll
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ProgramacionIII.Shared.pdb
+/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/Debug/net10.0/ref/ProgramacionIII.Shared.dll
