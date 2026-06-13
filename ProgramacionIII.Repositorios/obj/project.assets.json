@@ -2183,11 +2183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
+      "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
       "projectName": "ProgramacionIII.Repositorios",
-      "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
+      "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
       "packagesPath": "/home/matiasa/.nuget/packages/",
-      "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/obj/",
+      "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -2203,11 +2203,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj": {
-              "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj"
+            "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj": {
+              "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj"
             },
-            "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
-              "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
+            "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+              "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
             }
           }
         }

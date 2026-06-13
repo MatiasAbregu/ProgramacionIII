@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using ProgramacionIII.Repositorios.Implementaciones;
+using ProgramacionIII.Shared.Constantes;
 using ProgramacionIII.Shared.DTO_Response;
 using ProgramacionIII.Shared.DTO_Usuarios;
 
@@ -9,22 +12,30 @@ namespace ProgramacionIII.Controladores
     [ApiController]
     public class UsuarioControlador : ControllerBase
     {
-
         private readonly IUsuarioServicio usuarioServicio;
-
-        public UsuarioControlador(IUsuarioServicio usuarioServicio)
+        private readonly IOutputCacheStore outputCache;
+        private const string cacheKey = "UsuariosCache";
+        
+        public UsuarioControlador(IUsuarioServicio usuarioServicio, IOutputCacheStore outputCache)
         {
             this.usuarioServicio = usuarioServicio;
+            this.outputCache = outputCache;
         }
 
         [HttpGet]
+        [AllowAnonymous]
+        [OutputCache(Tags = [cacheKey])]
         public async Task<ActionResult> VisualizarUsuarios()
         {
             Response<List<UsuarioVerDTO>> res
                 = await usuarioServicio.BuscarUsuarios();
 
-            if (res.Estado == true && res.Mensaje == "") return StatusCode(200, res);
-            else if (res.Estado == true) return StatusCode(200, res);
+
+            if (res.Estado == true)
+            {
+                Response.Headers["Cache-Control"] = $"public,max-age={ConstantesGlobales.DuracionCacheEnSegundos}";
+                return StatusCode(200, res);
+            }
             else return StatusCode(500, res);
         }
 
@@ -55,6 +66,7 @@ namespace ProgramacionIII.Controladores
 
             Response<UsuarioVerDTO> res = await usuarioServicio.CrearNuevoUsuario(usuarioDTO);
 
+            await outputCache.EvictByTagAsync(cacheKey, default);
             if (res.Estado == true) return StatusCode(200, res);
             return StatusCode(500, res);
         }

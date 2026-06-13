@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj": {}
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj": {}
   },
   "projects": {
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj": {
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj",
+        "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj",
         "projectName": "ProgramacionIII.BD",
-        "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj",
+        "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj",
         "packagesPath": "/home/matiasa/.nuget/packages/",
-        "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/obj/",
+        "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
               }
             }
           }
@@ -358,14 +358,14 @@
         }
       }
     },
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj": {
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
+        "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
         "projectName": "ProgramacionIII.Repositorios",
-        "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
+        "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj",
         "packagesPath": "/home/matiasa/.nuget/packages/",
-        "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/obj/",
+        "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -381,11 +381,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.BD/ProgramacionIII.BD.csproj"
               },
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
               }
             }
           }
@@ -705,14 +705,14 @@
         }
       }
     },
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj": {
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj",
+        "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj",
         "projectName": "ProgramacionIII.Servicio",
-        "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj",
+        "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj",
         "packagesPath": "/home/matiasa/.nuget/packages/",
-        "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/obj/",
+        "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -728,8 +728,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
               }
             }
           }
@@ -1043,14 +1043,14 @@
         }
       }
     },
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj",
+        "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj",
         "projectName": "ProgramacionIII.Shared",
-        "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj",
+        "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj",
         "packagesPath": "/home/matiasa/.nuget/packages/",
-        "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/obj/",
+        "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -1377,14 +1377,14 @@
         }
       }
     },
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj": {
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
+        "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
         "projectName": "ProgramacionIII.Client",
-        "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
+        "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
         "packagesPath": "/home/matiasa/.nuget/packages/",
-        "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/obj/",
+        "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -1400,11 +1400,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj"
               },
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
               }
             }
           }
@@ -1762,14 +1762,14 @@
         }
       }
     },
-    "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj": {
+    "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj",
+        "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj",
         "projectName": "ProgramacionIII.Server",
-        "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj",
+        "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/ProgramacionIII.Server.csproj",
         "packagesPath": "/home/matiasa/.nuget/packages/",
-        "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/obj/",
+        "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -1785,11 +1785,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Repositorios/ProgramacionIII.Repositorios.csproj"
               },
-              "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj": {
-                "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj"
+              "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj": {
+                "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj"
               }
             }
           }

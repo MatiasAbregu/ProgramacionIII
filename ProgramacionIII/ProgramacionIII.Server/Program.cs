@@ -8,8 +8,14 @@ using ProgramacionIII.BD;
 using ProgramacionIII.Repositorios.Implementaciones;
 using ProgramacionIII.Repositorios.Servicios;
 using ProgramacionIII.Servicio.ServiciosHttp;
+using ProgramacionIII.Shared.Constantes;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddOutputCache(options =>
+{
+    options.DefaultExpirationTimeSpan = TimeSpan.FromSeconds(ConstantesGlobales.DuracionCacheEnSegundos);
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -46,6 +52,15 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddIdentityCore<ApplicationUser>(options =>
     {
         options.Stores.SchemaVersion = IdentitySchemaVersions.Version3;
+        
+        options.Password.RequireDigit = false;          
+        options.Password.RequireLowercase = false;   
+        options.Password.RequireUppercase = false;     
+        options.Password.RequireNonAlphanumeric = false;  
+        options.Password.RequiredLength = 4;            
+        options.Password.RequiredUniqueChars = 1;
+        
+        options.User.RequireUniqueEmail = false;
     })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
@@ -85,6 +100,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(ProgramacionIII.Client._Imports).Assembly);
 
+app.UseOutputCache();
 app.MapControllers();
 
 // Add additional endpoints required by the Identity /Account Razor components.

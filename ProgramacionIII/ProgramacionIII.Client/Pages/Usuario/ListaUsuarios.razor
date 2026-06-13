@@ -9,10 +9,12 @@
 <AuthorizeView Roles="Administrador">
     <Authorized>
         <h3>Usuarios</h3>
-        <br />
+        <br/>
         <div class="containerButtons">
-            <button class="btn btn-warning btnSearch" type="button" @onclick="() => LeerUsuarios()"><i class="bi bi-arrow-repeat"></i></button>
-            <button class="btn btn-primary btnSearch" type="button" @onclick="() => modal = true"><i class="bi bi-search"></i></button>
+            <button class="btn btn-warning btnSearch" type="button" @onclick="() => LeerUsuarios()"><i
+                    class="bi bi-arrow-repeat"></i></button>
+            <button class="btn btn-primary btnSearch" type="button" @onclick="() => modal = true"><i
+                    class="bi bi-search"></i></button>
             <a class="btn btn-success" href="/usuarios/crear">Crear usuario <i class="bi bi-person-fill-add"></i></a>
         </div>
         @if (modal)
@@ -23,18 +25,22 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5">Buscar usuario</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" @onclick="() => modal = false"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    @onclick="() => modal = false"></button>
                         </div>
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Nombre de usuario:</label>
-                                    <input @bind="NombreUsuario" type="text" class="form-control" id="recipient-name" required>
+                                    <input @bind="NombreUsuario" type="text" class="form-control" id="recipient-name"
+                                           required>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" @onclick="() => BuscarUsuarioPorNombre()" class="btn btn-primary">Buscar</button>
+                            <button type="button" @onclick="() => BuscarUsuarioPorNombre()" class="btn btn-primary">
+                                Buscar
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -57,7 +63,7 @@
                         <td colspan="3">@mensaje</td>
                     </tr>
                 }
-                else if(usuarios == null)
+                else if (usuarios == null)
                 {
                     <tr>
                         <td colspan="3">@mensaje</td>
@@ -77,7 +83,8 @@
                                 <a class="btn btn-primary" href="/usuarios/editar/@usuario.Id">
                                     <i class="bi bi-pencil"></i>
                                 </a>
-                                <button class="btn @(usuario.Estado == "Activo" ? "btn-danger" : "btn-success")" @onclick="() => CambiarEstado(usuario.Id)">
+                                <button class="btn @(usuario.Estado == "Activo" ? "btn-danger" : "btn-success")"
+                                        @onclick="() => CambiarEstado(usuario.Id)">
                                     @if (usuario.Estado == "Activo")
                                     {
                                         <i class="bi bi-dash-circle"></i>
@@ -90,7 +97,6 @@
                             </td>
                         </tr>
                     }
-            
                 }
                 </tbody>
             </table>
@@ -151,4 +157,5 @@
             mensaje = res.Respuesta.Mensaje;
         }
     }
+
 }

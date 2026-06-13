@@ -2133,11 +2133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
+      "projectUniqueName": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
       "projectName": "ProgramacionIII.Client",
-      "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
+      "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/ProgramacionIII.Client.csproj",
       "packagesPath": "/home/matiasa/.nuget/packages/",
-      "outputPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/obj/",
+      "outputPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII/ProgramacionIII.Client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/matiasa/.nuget/NuGet/NuGet.Config"
@@ -2153,11 +2153,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj": {
-              "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj"
+            "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj": {
+              "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Servicio/ProgramacionIII.Servicio.csproj"
             },
-            "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
-              "projectPath": "/home/matiasa/RiderProjects/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
+            "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj": {
+              "projectPath": "/home/matiasa/Documentos/ProgramacionIII/ProgramacionIII.Shared/ProgramacionIII.Shared.csproj"
             }
           }
         }

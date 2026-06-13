@@ -12,7 +12,7 @@ using ProgramacionIII.BD;
 namespace ProgramacionIII.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260513180946_Initial")]
+    [Migration("20260613191830_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

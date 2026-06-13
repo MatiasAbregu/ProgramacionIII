@@ -8,60 +8,70 @@
 @inject IHttpServicio http
 @inject NavigationManager httpNav
 
-<h3>Crear usuario</h3>
-<EditForm Model="usuario" OnValidSubmit="Guardar" FormName="formularioCrearUsuario">
-    <DataAnnotationsValidator />
-    @if (!string.IsNullOrEmpty(MensajeError))
-    {
-        <p class="alert alert-danger">@MensajeError</p>
-    }
-    <div class="form-group container-fluid">
-        <div class="my-3">
-            <label>Escriba el nombre de usuario:</label>
-            <div>
-                <InputText class="form-control" @bind-Value="usuario.NombreUsuario" />
-                <ValidationMessage For="@(() => usuario.NombreUsuario)" />
-            </div>
-        </div>
-        <div class="my-3">
-            <label>Escriba la contraseña del usuario:</label>
-            <div>
-                <InputText class="form-control" @bind-Value="usuario.Contrasena" />
-                <ValidationMessage For="@(() => usuario.Contrasena)" />  
-            </div>
-        </div>
-        <div class="my-3">
-            <label>Escoja el rol del usuario:</label>
-            <div>
-                @if (roles != null)
-                {
-                    <InputSelect class="form-select" @bind-Value="RolSeleccionado">
-                        @foreach (var rol in roles)
+<AuthorizeView Roles="Administrador">
+    <Authorized>
+        <h3>Crear usuario</h3>
+        <EditForm Model="usuario" OnValidSubmit="Guardar" FormName="formularioCrearUsuario" Context="createContext">
+            <DataAnnotationsValidator/>
+            @if (!string.IsNullOrEmpty(MensajeError))
+            {
+                <p class="alert alert-danger">@MensajeError</p>
+            }
+            <div class="form-group container-fluid">
+                <div class="my-3">
+                    <label>Escriba el nombre de usuario:</label>
+                    <div>
+                        <InputText class="form-control" @bind-Value="usuario.NombreUsuario"/>
+                        <ValidationMessage For="@(() => usuario.NombreUsuario)"/>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <label>Escriba la contraseña del usuario:</label>
+                    <div>
+                        <InputText class="form-control" @bind-Value="usuario.Contrasena"/>
+                        <ValidationMessage For="@(() => usuario.Contrasena)"/>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <label>Escoja el rol del usuario:</label>
+                    <div>
+                        @if (roles != null)
                         {
-                            <option value="@rol.NombreRol">@FormatearTexto(rol.NombreRol)</option>
+                            <InputSelect class="form-select" @bind-Value="RolSeleccionado">
+                                @foreach (var rol in roles)
+                                {
+                                    <option value="@rol.NombreRol">@FormatearTexto(rol.NombreRol)</option>
+                                }
+                            </InputSelect>
+                            <ValidationMessage For="@(() => usuario.Roles)"/>
                         }
-                    </InputSelect>
-                    <ValidationMessage For="@(() => usuario.Roles)" />
-                }
-                else
-                {
-                    <p>Hubo un error al cargar los roles desde el servidor. Reintente más tarde o contacte con un administrador.</p>
-                }
+                        else
+                        {
+                            <p>Hubo un error al cargar los roles desde el servidor. Reintente más tarde o contacte con
+                                un administrador.</p>
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <button class="btn btn-success" type="submit">Guardar</button>
-    <a class="btn btn-danger" href="/usuarios">Cancelar</a>
-</EditForm>
+            <button class="btn btn-success" type="submit">Guardar</button>
+            <a class="btn btn-danger" href="/usuarios">Cancelar</a>
+        </EditForm>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Usted no está autorizado a acceder a esta opción.</h3>
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
     private UsuarioCrearDTO usuario = new UsuarioCrearDTO();
     private List<VerRolDTO> roles;
+
     private string RolSeleccionado
     {
         get => usuario.Roles?.FirstOrDefault() ?? "";
         set => usuario.Roles = new List<string> { value };
     }
+
     private string MensajeError;
 
     protected override async Task OnInitializedAsync()
@@ -103,4 +113,5 @@
             }
         }
     }
+
 }
